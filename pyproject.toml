@@ -1,0 +1,17 @@
+[project]
+name = "araumi"
+version = "0.0.1"
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=2.2",
+  "numpy",
+  "matplotlib",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+ot = ["POT>=0.9.4", "geomloss>=0.2.6"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
