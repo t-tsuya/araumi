@@ -1,7 +1,7 @@
 import torch
 
 def test_import_modules():
-    pass
+    from araumi.datasets import IsoMoG, swiss_roll  # noqa: F401
 
 def test_mog_sample_shape():
     pass
