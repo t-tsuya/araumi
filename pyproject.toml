@@ -10,6 +10,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+dev = ["pytest"]
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
