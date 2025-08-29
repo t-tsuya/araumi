@@ -1,5 +1,5 @@
 import torch
-from araumi.datasets import IsoMoG
+from araumi.datasets import IsoMoG, swiss_roll
 
 def test_import_modules():
     from araumi.datasets import IsoMoG, swiss_roll  # noqa: F401
@@ -13,4 +13,5 @@ def test_mog_sample_shape():
     assert x.shape == (128, d)
 
 def test_swiss_roll_shape():
-    pass
+    x = swiss_roll(256)
+    assert x.shape == (256, 2)
