@@ -3,6 +3,9 @@ import torch
 
 LOG2PI = math.log(2.0 * math.pi)
 
+def _to_device_dtype(x, device, dtype):
+  return x.to(device=device, dtype=dtype, copy=False)
+
 class IsoMoG:
   """
   等方的ガウス分布: Σ_k = σ_k^2 I.
