@@ -72,6 +72,6 @@ class IsoMoG:
     ∇_x log p(x) = Σ_k r_k(x) * (μ_k - x) / σ_k^2
     """
     x = x.to(device=self.device, dtype=self.dtype)  # [N,d]
-    r = self.responsiblities(x)                     # [N,K]
+    r = self.responsibilities(x)                     # [N,K]
     num = (self.means[None, :, :] - x[:, None, :]) / self.sigma2[None, :].unsqueeze(-1)  # [N,K,d]
     return (r.unsqueeze(-1) * num).sum(dim=1)       # [N,d]
